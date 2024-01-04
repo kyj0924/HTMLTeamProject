@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Re-Plates</title>
+    <link rel="stylesheet" href="css/news.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <a href="mainpage.html" class="logo"
+        ><img
+          class="company_logo"
+          src="img/clogo.png"
+          alt="Re-Plates"
+      /></a>
+
+      <ul class="menu">
+        <li class="menu_li" onmouseover="om()" onmouseout="out()">
+          <a href="select1.html" class="mainmenu1">Re-Plates</a>
+          <ul class="submenu">
+            <li class="menu_li">
+              <a href="select1.html">회사소개</a>
+            </li>
+            <li class="menu_li">
+              <a href="인사말.html">인사말</a>
+            </li>
+            <!--
+                  <li class="menu_li">
+                      <a href="#">연혁</a>
+                  </li>
+                  <li class="menu_li">
+                      <a href="#">인증</a>
+                  </li>
+                  <li class="menu_li">
+                      <a href="#">수상</a>
+                  </li>
+                  <li class="menu_li">
+                      <a href="#">주요사업실적</a>
+                  </li>
+                  <li class="menu_li">
+                      <a href="#">CI소개</a>
+                  </li>
+                  -->
+          </ul>
+        </li>
+
+        <li class="menu_li" onmouseover="om()" onmouseout="out()">
+          <a href="employee_image.html" class="mainmenu3">인재채용</a>
+          <ul class="submenu">
+            <li class="menu_li">
+              <a href="employee_image.html">인재상</a>
+            </li>
+            <li class="menu_li">
+              <a href="recruitment_procedures.html">채용절차</a>
+            </li>
+            <li class="menu_li">
+              <a href="recruitment information1.html">채용정보</a>
+            </li>
+            <!--
+                  <li class="menu_li">
+                      <a href="#">복지제도</a>
+                  </li>
+                  <li class="menu_li">
+                      <a href="#">채용정보</a>
+                  </li>
+                  -->
+          </ul>
+        </li>
+        <li class="menu_li" onmouseover="om()" onmouseout="out()">
+          <a href="social.html" class="mainmenu4">홍보센터</a>
+          <ul class="submenu">
+            <li class="menu_li">
+              <a href="social.html">사회공헌</a>
+            </li>
+            <li class="menu_li">
+              <a href="issue.html">사내소식</a>
+            </li>
+            <li class="menu_li">
+              <a href="news.html">보도자료</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu_li" onmouseover="om()" onmouseout="out()">
+          <a href="map.html" class="mainmenu5">오시는길</a>
+          <ul class="submenu"></ul>
+        </li>
+      </ul>
+      <!--메뉴바 모양 바뀌는거-->
+      <svg
+        class="small_menu_icon"
+        onclick="smclick()"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-list"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+        />
+      </svg>
+    </div>
+
+    <h1 class="Mtitle">보도 자료</h1>
+    <div class="title_div">
+      <hr class="title_hr" />
+      <ul class="gnb1">
+        <li class="title"><p class="span">Re-Plates</p></li>
+        <li class="page_move">
+          <a href="social.html" class="title_a">사회공헌</a>
+        </li>
+        <li class="page_move">
+          <a href="issue.html" class="title_a">사내소식</a>
+        </li>
+        <li class="page_move">
+          <a href="news.html" class="title_a">보도자료</a>
+        </li>
+      </ul>
+      <hr class="title_hr" />
+    </div>
+
+    <article id="main">
+      <h1 id="title" style="width: 1300px">보도 자료</h1>
+      <hr style="width: 1300px" />
+      <article id="board">
+        <div id="search" style="width: 1300px">
+          <select id="sel">
+            <option value="a">전체</option>
+            <option value="b">제목</option>
+            <option value="c">내용</option>
+            <option value="d">작성자</option>
+          </select>
+          <input type="text" id="keyword" />
+          <input type="submit" id="se" value="SEARCH" />
+        </div>
+
+        <div id="board_list" style="width: 1300px">
+          <table>
+            <caption>
+              보도 자료 목록
+            </caption>
+            <thead>
+              <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>등록일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span id="label">공지</span></td>
+                <td id="t">
+                  <a href="#">성남시, '청년 두런두런 취업' 참여자 55명 모집</a>
+                </td>
+                <td>담당자</td>
+                <td>2023.09.20</td>
+              </tr>
+
+              <tr>
+                <td><span id="label2">6</span></td>
+                <td id="t">
+                  <a href="#"
+                    >성남고용노동지청 주최, 「근무혁신 10대 제안 실천 선언식」
+                    참석</a
+                  >
+                </td>
+                <td>담당자</td>
+                <td>2023.09.03</td>
+              </tr>
+              <tr></tr>
+              <tr>
+                <td><span id="label2">5</span></td>
+                <td id="t">
+                  <a href="#">한국공항공사 `1단계 빅데이터 플랫폼' 사업 완료</a>
+                </td>
+                <td>담당자</td>
+                <td>2023.09.03</td>
+              </tr>
+              <tr></tr>
+              <tr>
+                <td><span id="label2">4</span></td>
+                <td id="t"><a href="#">2022 대한민국 IT서비스 혁신대상</a></td>
+                <td>담당자</td>
+                <td>2023.09.03</td>
+              </tr>
+              <tr></tr>
+
+              <tr>
+                <td><span id="label2">3</span></td>
+                <td id="t">
+                  <a href="#"
+                    >성남상공회의소 주최, 「2017년 제19회 성남상공대상 시상식
+                    기업창업대상」 수상</a
+                  >
+                </td>
+                <td>담당자</td>
+                <td>2023.09.03</td>
+              </tr>
+              <tr></tr>
+
+              <tr>
+                <td><span id="label2">2</span></td>
+                <td id="t">
+                  <a href="#"
+                    >성남고용노동지청 주최, 「근무혁신 10대 제안 실천 선언식」
+                    참석</a
+                  >
+                </td>
+                <td>담당자</td>
+                <td>2023.09.03</td>
+              </tr>
+
+              <tr>
+                <td><span id="label2">1</span></td>
+                <td id="t">
+                  <a href="#"
+                    >의왕 고천지구, 5개 첨단기업 2024년까지 들어선다</a
+                  >
+                </td>
+                <td>담당자</td>
+                <td>2023.09.01</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="south_button" style="width: 1300px">
+          <span>&lt;</span>
+
+          <b>1</b>
+
+          <a href="#" id="parenthesis">&gt;</a>
+        </div>
+      </article>
+    </article>
+
+    <div class="image-container">
+      <img
+        class="street-light"
+        src="img/street-light.png"
+        alt=""
+        width="50"
+        height="50"
+      />
+      <img class="garden" src="img/garden.png" alt="" width="50" height="50" />
+      <img class="road" src="img/road.png" alt="" width="50" height="50" />
+      <img
+        class="elevator"
+        src="img/elevator.png"
+        alt=""
+        width="50"
+        height="50"
+      />
+      <img
+        class="escalator"
+        src="img/escalator.png"
+        alt=""
+        width="50"
+        height="50"
+      />
+    </div>
+
+    <!-- 모든 페이지 공통 바텀부분 -->
+    <div id="bottom">
+      <div id="company">
+        <h2>
+          <svg
+            width="25"
+            height="25"
+            fill="currentColor"
+            id="bottom_icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H3Zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Z"
+            />
+          </svg>
+          COMPANY
+        </h2>
+        <ul id="bottom_ul">
+          <li>(주)RE-PLATES</li>
+          <li>대표이사 : 김영재</li>
+          <li>사업자번호 : 123-11-123456</li>
+        </ul>
+      </div>
+
+      <div id="contact">
+        <h2>
+          <svg
+            width="25"
+            height="25"
+            fill="currentColor"
+            id="bottom_icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+            />
+          </svg>
+          CONTACT
+        </h2>
+        <ul id="bottom_ul">
+          <li>전화 : 02-1234-1234</li>
+          <li>팩스 : 02-1234-5678</li>
+          <li>주소 : 서울 서초구 서초대로 77길 54</li>
+        </ul>
+      </div>
+
+      <div id="email">
+        <h2>
+          <svg
+            width="25"
+            height="25"
+            fill="currentColor"
+            id="bottom_icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
+            />
+          </svg>
+          E-MAIL
+        </h2>
+        <ul id="bottom_ul">
+          <li>본사 : admin@replates.co.kr</li>
+          <li>영업팀 : sales@replates.co.kr</li>
+          <li>기술팀 : tec@replates.co.kr</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="scrolltop">
+      <svg
+        onclick="window.scrollTo(0,0);"
+        id="top"
+        width="40"
+        height="40"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"
+        />
+      </svg>
+    </div>
+  </body>
+
+  <script>
+    function om() {
+      //let n=document.getElementById("submenu");
+      //n.style.height="500";
+      let n = document.getElementsByClassName("submenu");
+
+      // 메뉴에 마우스를 올렸을 때 메뉴 크기를 늘린다.
+      let m = document.getElementsByClassName("menu");
+      for (let i = 0; i < n.length; i++) {
+        n[i].style.width = "100%";
+        n[i].style.height = "250px";
+        //n[i].style.transition-duration: duration;
+      }
+      for (let i = 0; i < m.length; i++) {
+        m[i].style.height = "250px";
+      }
+    }
+    function out() {
+      let n = document.getElementsByClassName("submenu");
+      let m = document.getElementsByClassName("menu");
+      for (let i = 0; i < n.length; i++) {
+        n[i].style.height = 0;
+      }
+      for (let i = 0; i < m.length; i++) {
+        // header의 height 크기와 동일하게 만들어줘야 함
+        m[i].style.height = "78.5px";
+      }
+      //let m = document.getElementsByClassName("header");
+      /*
+            for(let m=0; i<n.length; i++){
+                m[i].style.z-index=0;
+            }
+            */
+    }
+
+    // small menu 클릭 시 menupage로 이동
+    function smclick() {
+      window.location.href = "menupage.html";
+    }
+
+    function num2() {
+      document.getElementById("number2");
+      window.location.href = "recruitment information2.html";
+    }
+
+    const images = document.querySelectorAll(".image-container img");
+    let currentIndex = 0;
+
+    function showNextImage() {
+      images[currentIndex].style.opacity = 0; // 현재 이미지를 숨김
+      currentIndex = (currentIndex + 1) % images.length; // 다음 이미지 인덱스 계산
+      images[currentIndex].style.opacity = 1; // 다음 이미지를 보임
+    }
+
+    // 초기에 첫 번째 이미지를 보이도록 설정
+    images[currentIndex].style.opacity = 1;
+
+    // 2초마다 showNextImage 함수를 호출하여 이미지를 전환
+    setInterval(showNextImage, 2000);
+  </script>
+</html>

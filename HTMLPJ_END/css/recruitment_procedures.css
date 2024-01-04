@@ -1,0 +1,681 @@
+@media screen and (max-width:1549px) {
+  @font-face {
+      font-family: 'GangwonState';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/GangwonState.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+  }
+  *{
+      padding: 0;
+      margin: 0;
+  }
+  body{
+      background-color: white;
+  }
+  .header{
+      position: fixed;
+      top: 0px;
+      
+      width: 100%;
+      height: 78.5px;
+      background-color: white;
+      border-bottom: 1px solid rgb(231, 225, 225);
+      z-index: 9999;
+  }
+  a > .company_logo{
+      width: 300px;
+      height: 80px;
+      padding-top: 0;
+      margin-left: 30px;
+      
+
+  }
+  .menu_li{
+      list-style: none;
+  }
+  a{
+      text-decoration: none;
+  }
+  .menu{
+      clear: left;
+      float: right;
+      /*
+      clear: left;
+      float: right;
+      */
+      /*width: 1200px;*/
+      /*height: 500px;*/
+      /*header의 height와 동일한 값으로 잡아야 함*/
+      /*height:78.5px;*/
+      overflow: hidden;
+      margin-top: 0;
+      display: none;
+  }
+  .menu > li{
+      width:25%;
+      float: left;
+      text-align: center;
+      line-height: 80px;
+      /*background-color: #5778ff;*/
+      background-color: #7AB49D;
+  }
+  .menu a{
+      color: white;
+  }
+  .submenu > li{
+      line-height: 50px;
+  }
+
+  .submenu{
+      height: 0;
+      overflow: hidden;
+      /*background-color: #94a9ff;*/
+      background-color: #9dc7b6;
+  }
+
+  .menu > li > a:hover{
+      transition-duration: 0.5s;
+  }
+  .menu > li > a:hover, submenu{
+      height: 500px;
+      transition-duration: 1s;
+  }
+  /* 창 크기 작아졌을 때 생기는 메뉴바 css*/
+  .small_menu_icon{
+      width: 40px;
+      height: 40px;
+      float: right;
+      margin-top: 20px;
+      margin-right: 10px;
+      cursor: pointer;
+  }
+  
+
+  /*여기까지가 메뉴바*/
+
+#main {
+  padding: 300px 300px 500px 300px;
+  margin: 0px;
+  width: 1300px;
+}
+
+#first {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+#second {
+  clear: both;
+  text-align: center;
+}
+
+#ment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ment1 {
+  margin: 100px;
+  float: left;
+}
+#ment2 {
+  margin: 100px;
+  float: left;
+}
+#ment3 {
+  margin: 100px;
+  float: left;
+}
+
+dt {
+  text-align: center;
+}
+dt span {
+  font-size: 30px;
+  color: darkgreen;
+}
+.sp_step {
+  display: block;
+  margin-bottom: 30px;
+}
+
+#step {
+  margin-top: 50px;
+  position: absolute;
+  width: 1300px;
+}
+
+#step1 {
+  float: left;
+  width: 17%;
+  margin-left: 3%;
+  padding-top: 60px;
+
+  height: 200px;
+  padding: 10px 25px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#step2 {
+  float: left;
+  width: 17%;
+  margin-left: 3%;
+  padding-top: 60px;
+
+  height: 200px;
+  padding: 10px 25px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#step3 {
+  float: left;
+  width: 17%;
+  margin-left: 3%;
+  padding-top: 60px;
+
+  height: 200px;
+  padding: 10px 25px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#step4 {
+  float: left;
+  width: 17%;
+  margin-left: 3%;
+  padding-top: 60px;
+
+  height: 200px;
+  padding: 10px 25px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#etc {
+  border-right: 2px dotted rgb(209, 205, 205);
+  float: left;
+  box-sizing: border-box;
+  padding-right: 85px;
+  text-align: left;
+  width: 44%;
+}
+#enquiry {
+  padding-left: 100px;
+  width: 44%;
+  display: block;
+  box-sizing: border-box;
+  padding-right: 85px;
+  text-align: left;
+}
+
+#third {
+  padding: 0px 250px 100px 250px;
+  display: flex;
+  justify-content: center;
+  width: 1300px;
+}
+#third ul li {
+  list-style-type: none;
+  width: 1300px;
+}
+
+#bottom {
+  bottom: 0;
+  left: 0;
+  display: inline-flex;
+  color: white;
+  width: 1920px;
+  background-color: rgb(57, 55, 55);
+  text-align: left;
+}
+
+#company {
+  float: left;
+  color: white;
+  width: 1920px;
+  background-color: rgb(57, 55, 55);
+}
+
+#bottom_icon {
+  /* padding-left: 15px; */
+  padding-right: 15px;
+}
+
+#contact {
+  float: left;
+  color: white;
+  width: 100%;
+  background-color: rgb(57, 55, 55);
+}
+#email {
+  float: left;
+  color: white;
+  width: 100%;
+  background-color: rgb(57, 55, 55);
+}
+#company,#contact,#email{
+  margin: 10px 0px 10px 10px;
+}
+
+#scrolltop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}
+
+.image-container {
+  margin: 10px;
+  position: relative;
+  width: 50px; /* 이미지 컨테이너의 너비 조절 */
+  height: 50px; /* 이미지 컨테이너의 높이 조절 */
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#bottom_ul li {
+  list-style: none;
+}
+
+.Mtitle {
+  margin-top: 200px;
+  margin-left: 50px;
+}
+.gnb1 {
+  list-style: none;
+  /* 리스트 마커 숨기기 */
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.title_a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.gnb1 {
+  border: 1px solid white;
+}
+.page_move {
+  display: inline-flex;
+  margin: 0px 20px 0px 20px;
+}
+.title_div{
+  white-space: nowrap;
+}
+.title_hr {
+  border: 1px solid #7ab49d;
+  width: 1920px;
+}
+.title {
+  display: inline-flex;
+  width: 200px;
+  border-right: 2px solid #7ab49d;
+  font-weight: bold;
+  padding: 20px;
+}
+.span {
+  margin: auto;
+}
+.title2 {
+  text-align: center;
+  margin-top: 150px;
+  font-size: 40px;
+  color: #7ab49d;
+}
+.view {
+  border: 1px solid black;
+  display: table;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 20px;
+}
+}
+
+@media screen and (min-width:1550px) {
+  @font-face {
+      font-family: 'GangwonState';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/GangwonState.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+  }
+  *{
+      padding: 0;
+      margin: 0;
+  }
+  body{
+      background-color: white;
+  }
+  .header{
+      position: fixed;
+      top: 0px;
+      
+      width: 100%;
+      height: 78.5px;
+      background-color: white;
+      border-bottom: 1px solid rgb(231, 225, 225);
+      z-index: 9999;
+  }
+  a > .company_logo{
+      width: 300px;
+      height: 80px;
+      padding-top: 0;
+      margin-left: 30px;
+      
+
+  }
+  .menu_li{
+      list-style: none;
+  }
+  a{
+      text-decoration: none;
+  }
+  .menu{
+      clear: left;
+      float: right;
+      /*
+      clear: left;
+      float: right;
+      */
+      width: 1200px;
+      /*height: 500px;*/
+      /*header의 height와 동일한 값으로 잡아야 함*/
+      height:78.5px;
+      overflow: hidden;
+      margin-top: 0;
+      border-radius: 0 0 0 30px;
+  }
+  .menu > li{
+      width:25%;
+      float: left;
+      text-align: center;
+      line-height: 80px;
+      /*background-color: #5778ff;*/
+      background-color: #7AB49D;
+  }
+  .menu a{
+      color: white;
+  }
+  .submenu > li{
+      line-height: 50px;
+  }
+
+  .submenu{
+      height: 0;
+      overflow: hidden;
+      /*background-color: #94a9ff;*/
+      background-color: #9dc7b6;
+  }
+
+  .menu > li > a:hover{
+      transition-duration: 0.5s;
+  }
+  .menu > li > a:hover, submenu{
+      height: 500px;
+      transition-duration: 1s;
+  }
+
+  .small_menu_icon{
+      display: none;
+  }
+  #main {
+    padding: 300px 300px 500px 300px;
+    margin: 0px;
+    width: 1300px;
+  }
+  
+  #first {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  
+  #second {
+    clear: both;
+    text-align: center;
+  }
+  
+  #ment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #ment1 {
+    margin: 100px;
+    float: left;
+  }
+  #ment2 {
+    margin: 100px;
+    float: left;
+  }
+  #ment3 {
+    margin: 100px;
+    float: left;
+  }
+  
+  dt {
+    text-align: center;
+  }
+  dt span {
+    font-size: 30px;
+    color: darkgreen;
+  }
+  .sp_step {
+    display: block;
+    margin-bottom: 30px;
+  }
+  
+  #step {
+    margin-top: 50px;
+    position: absolute;
+  }
+  
+  #step1 {
+    float: left;
+    width: 17%;
+    margin-left: 3%;
+    padding-top: 60px;
+  
+    height: 200px;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #step2 {
+    float: left;
+    width: 17%;
+    margin-left: 3%;
+    padding-top: 60px;
+  
+    height: 200px;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #step3 {
+    float: left;
+    width: 17%;
+    margin-left: 3%;
+    padding-top: 60px;
+  
+    height: 200px;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #step4 {
+    float: left;
+    width: 17%;
+    margin-left: 3%;
+    padding-top: 60px;
+  
+    height: 200px;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #etc {
+    border-right: 2px dotted rgb(209, 205, 205);
+    float: left;
+    box-sizing: border-box;
+    padding-right: 85px;
+    text-align: left;
+    width: 44%;
+  }
+  #enquiry {
+    padding-left: 100px;
+    width: 44%;
+    display: block;
+    box-sizing: border-box;
+    padding-right: 85px;
+    text-align: left;
+  }
+  
+  #third {
+    padding: 0px 250px 100px 250px;
+    display: flex;
+    justify-content: center;
+  }
+  #third ul li {
+    list-style-type: none;
+  }
+  
+  #bottom {
+    bottom: 0;
+    left: 0;
+    display: inline-flex;
+    color: white;
+    width: 1920px;
+    background-color: rgb(57, 55, 55);
+    text-align: left;
+  }
+  
+  #company {
+    float: left;
+    color: white;
+    width: 100%;
+    background-color: rgb(57, 55, 55);
+  }
+  
+  #bottom_icon {
+    /* padding-left: 15px; */
+    padding-right: 15px;
+  }
+  
+  #contact {
+    float: left;
+    color: white;
+    width: 100%;
+    background-color: rgb(57, 55, 55);
+  }
+  #email {
+    float: left;
+    color: white;
+    width: 100%;
+    background-color: rgb(57, 55, 55);
+  }
+  #company,#contact,#email{
+    margin: 10px 0px 10px 10px;
+  }
+  
+  #scrolltop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .image-container {
+    margin: 10px;
+    position: relative;
+    width: 50px; /* 이미지 컨테이너의 너비 조절 */
+    height: 50px; /* 이미지 컨테이너의 높이 조절 */
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  #bottom_ul li {
+    list-style: none;
+  }
+  
+  .Mtitle {
+    margin-top: 200px;
+    margin-left: 50px;
+  }
+  .gnb1 {
+    list-style: none;
+    /* 리스트 마커 숨기기 */
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .title_a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+  
+  .gnb1 {
+    border: 1px solid white;
+  }
+  .page_move {
+    display: inline-flex;
+    margin: 0px 20px 0px 20px;
+  }
+  .title_hr {
+    border: 1px solid #7ab49d;
+  }
+  .title {
+    display: inline-flex;
+    width: 200px;
+    border-right: 2px solid #7ab49d;
+    font-weight: bold;
+    padding: 20px;
+  }
+  .span {
+    margin: auto;
+  }
+  .title2 {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 40px;
+    color: #7ab49d;
+  }
+  .view {
+    border: 1px solid black;
+    display: table;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+  }

@@ -1,0 +1,628 @@
+@font-face {
+    font-family: 'GangwonState';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/GangwonState.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: white;
+}
+.header{
+    position: fixed;
+    top: 0px;
+    
+    width: 100%;
+    height: 78.5px;
+    background-color: white;
+    border-bottom: 1px solid rgb(231, 225, 225);
+    z-index: 9999;
+}
+a > .company_logo{
+    width: 300px;
+    height: 80px;
+    padding-top: 0;
+    margin-left: 30px;
+    
+
+}
+
+a{
+    text-decoration: none;
+}
+
+/* 창 크기 작아졌을 때 생기는 메뉴바 css*/
+.small_menu_div{
+    clear: both;
+    width: 100%;
+    height: 600px;
+    margin-top: 200px;
+}
+
+.small_menu{
+    width: 100%;
+    height: 500px;
+}
+
+.small_menu_li{
+    list-style: none;
+}
+/*
+.small_menubar{
+    float: right;
+    width: 500px;
+    height: 40px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+*/
+.close_small_menu{
+    width: 150px;
+    height: 78.5px;
+    background-color: #7AB49D;
+    border: 1px solid #7AB49D;
+    position: fixed;
+    top:0px;
+    right:0px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    
+}
+
+.small_menu > .small_menu_li1{
+    width: 100%;
+    height: 80px;
+    /*height:150px*/
+    overflow: hidden;
+    /*float: left;*/
+    text-align: center;
+    /*line-height: 80px;*/
+    /*background-color: #5778ff;*/
+    background-color: #7AB49D;
+}
+.small_menu > .small_menu_li3{
+    max-width: 100%;
+    height: 80px;
+    /*height: 190px;*/
+    overflow: hidden;
+    /*float: left;*/
+    text-align: center;
+    /*line-height: 80px;*/
+    /*background-color: #5778ff;*/
+    background-color: #7AB49D;
+}
+.small_menu > .small_menu_li4{
+    max-width: 100%;
+    height: 80px;
+    /*height: 190px;*/
+    overflow: hidden;
+    /*float: left;*/
+    text-align: center;
+    /*line-height: 80px;*/
+    /*background-color: #5778ff;*/
+    background-color: #7AB49D;
+}
+.small_menu > .small_menu_li5{
+    max-width: 100%;
+    height: 80px;
+    overflow: hidden;
+    /*float: left;*/
+    text-align: center;
+    /*line-height: 80px;*/
+    /*background-color: #5778ff;*/
+    background-color: #7AB49D;
+}
+
+.small_mainmenu1{
+    display: block;
+    cursor: pointer;
+    height: 80px;
+    color: white;
+    line-height: 80px;
+    
+}
+.small_mainmenu3{
+    display: block;
+    cursor: pointer;
+    height: 80px;
+    color: white;
+    /*line-height를 height와 동일하게 설정하여 세로로 가운데 정렬*/
+    line-height: 80px;
+}
+.small_mainmenu4{
+    display: block;
+    cursor: pointer;
+    height: 80px;
+    color: white;
+    line-height: 80px;
+}
+.small_mainmenu5{
+    display: block;
+    cursor: pointer;
+    height: 80px;
+    color: white;
+    line-height: 80px;
+}
+
+.small_submenu1{
+    height: 80px;
+    overflow: hidden;
+    /*background-color: #94a9ff;*/
+    background-color: #9dc7b6;
+    
+}
+.small_submenu3{
+    height: 120px;
+    overflow: hidden;
+    background-color: #9dc7b6;
+    
+}
+.small_submenu4{
+    height: 120px;
+    overflow: hidden;
+    background-color: #9dc7b6;
+}
+/*
+.small_submenu5{
+    height: 100px;
+    overflow: hidden;
+    background-color: #9dc7b6;
+}
+*/
+
+.small_submenu_li > a{
+    color: white;
+    line-height: 35px;
+}
+
+/*여기까지가 메뉴바*/
+
+.info1{
+    /*float:left;*/
+    display: flex;
+    width: 1700px;
+    height: 700px;
+    margin-left: 30px;
+    margin-top: 300px;
+}
+
+.info_p_all{
+    width: 700px;
+    height: 700px;
+    margin-top: 200px;
+    margin-right: 300px;
+}
+
+.info_p1{
+    display: block;
+    font-size: 30px;
+    font-family: 'GangwonState';
+}
+.info_p2{
+    font-size: 60px;
+    font-family: 'GangwonState';
+    font-weight: bold;
+    
+}
+.info_p3{
+    font-size: 17px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sp1{
+    font-size: 22px;
+    font-weight: bold;
+    color: green;
+}
+
+.main_img1{
+    
+    width: 700px;
+    height: 700px;
+}
+
+.consulting{
+    display: flex;
+    width: 1700px;
+    height: 700px;
+    margin-left: 30px;
+    margin-top: 300px;
+}
+
+.consulting_text_all{
+    width: 700px;
+    height: 700px;
+    margin-top: 200px;
+    margin-right: 300px;
+}
+
+.con_p1{
+    display: block;
+    font-size: 22px;
+    font-family: 'GangwonState';
+    font-weight: bold;
+}
+.con_p2{
+    
+    font-size: 32px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.con_p3{
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sp2{
+    color: green;
+}
+/* 버튼 꾸미기 및 효과 적용 */
+.Project_Consulting{
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    /*border: 2px solid #0DBED5;*/
+    border: 2px solid #7AB49D;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 15px;
+    cursor: pointer;
+
+
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+}
+.Project_Consulting:focus{
+    outline: none;
+}
+.Project_Consulting::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*background-color: #0DBED5;*/
+    background-color: #7AB49D;
+    top: 0;
+    left: -100%;
+    transition: all 1s;
+    z-index: -1;
+}
+.Project_Consulting:hover::before{
+    transform: translateX(100%);
+}
+.Project_Consulting:hover{
+    color: #fff;
+
+}
+
+.main_consulting_img{
+    width: 700px;
+    height: 700px;
+    
+}
+
+/* Project Consulting 과 SI Construction 각각 옆에 사진 넣어보려 했는데
+생각처럼 되지 않음
+.ex_picture1{
+    display: inline;
+    width: 200px;
+    height: 300px;
+}
+*/
+
+.construction{
+    display: flex;
+    width: 1700px;
+    height: 700px;
+    margin-left: 30px;
+    margin-top: 300px;
+}
+
+.construction_text_all{
+    width: 800px;
+    height: 700px;
+    margin-top: 200px;
+    margin-left: 350px;
+}
+
+/* 버튼 꾸미기 및 효과 적용 */
+.Web_Construction{
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    /*border: 2px solid #0DBED5;*/
+    border: 2px solid #7AB49D;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 15px;
+    cursor: pointer;
+
+
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+}
+.Web_Construction:focus{
+    outline: none;
+}
+.Web_Construction::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*background-color: #0DBED5;*/
+    background-color: #7AB49D;
+    top: 0;
+    left: -100%;
+    transition: all 1s;
+    z-index: -1;
+}
+.Web_Construction:hover::before{
+    transform: translateX(100%);
+}
+.Web_Construction:hover{
+    color: #ffffff;
+
+}
+
+
+.constr_p1{
+    display: block;
+    font-size: 22px;
+    font-family: 'GangwonState';
+    font-weight: bold;
+}
+.constr_p2{
+    font-size: 32px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.constr_p3{
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sp3{
+    color: green;
+}
+
+
+/* 버튼 꾸미기 및 효과 적용 */
+.Web_Development{
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    /*border: 2px solid #0DBED5;*/
+    border: 2px solid #7AB49D;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 15px;
+    cursor: pointer;
+
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+}
+.Web_Development:focus{
+    outline: none;
+}
+.Web_Development::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*background-color: #0DBED5;*/
+    background-color: #7AB49D;
+    top: 0;
+    left: -100%;
+    transition: all 1s;
+    z-index: -1;
+}
+.Web_Development:hover::before{
+    transform: translateX(100%);
+}
+.Web_Development:hover{
+    color: #fff;
+
+}
+
+.main_construction_img{
+    width: 500px;
+    height: 500px;
+    float: left;
+}
+
+
+.development{
+    display: flex;
+    width: 1700px;
+    height: 700px;
+    margin-left: 30px;
+    margin-top: 300px;
+}
+
+.development_text_all{
+    width: 800px;
+    height: 700px;
+    margin-top: 200px;
+    margin-right: 300px;
+}
+
+.dev_p1{
+    display: block;
+    font-size: 22px;
+    font-family: 'GangwonState';
+    font-weight: bold;
+}
+.dev_p2{
+    font-size: 32px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dev_p3{
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sp4{
+    color: green;
+}
+
+.overview{
+    margin-top: 300px;
+    text-align: center;
+}
+.overview_p1{
+    font-size: 22px;
+    font-family: 'GangwonState';
+    font-weight: bold;
+}
+.overview_p2{
+    font-size: 32px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.overview_p3{
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sp5{
+    color: green;
+}
+
+
+
+/* 숫자 올라가게 하는 코드 */
+.counting {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto;
+    width: 50%;
+    text-align: center;
+}
+
+.count-num {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+}
+.count-num-unit{
+    text-align: center;
+    font-size: 35px;
+}
+.num_text{
+    text-align: center;
+}
+
+.col{
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    /*
+    margin-left: 50px;
+    margin-right: 50px;
+    */
+    text-align: center;
+}
+.building_icon{
+    width: 70px;
+    height: 70px;
+    /*margin: 60px 0px 20px 70px;*/
+    
+    align-items: center;
+    margin-top: 60px;
+}
+.complete_icon{
+    width: 70px;
+    height: 70px;
+    /*margin: 60px 0px 10px 70px;*/
+    align-items: center;
+    margin-top: 60px;
+}
+.employee_icon{
+    width: 70px;
+    height: 70px;
+    /*margin: 60px 0px 20px 70px;*/
+    align-items: center;
+    margin-top: 60px;
+}
+
+.company_open{
+    /*color: green;*/
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.complete_num{
+    /*color: green;*/
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.employee_num{
+    /*color: green;*/
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.replates_video_div{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.replates_video{
+    width: 1000px;
+    height: 600px;
+}
+
+/* 모든 페이지 바텀 부분 css */
+#bottom{
+    bottom: 0;
+    left: 0;
+    display: inline-flex;
+    color: white;
+    /*width: 100%;*/
+    width: 1920px;
+    background-color: rgb(57, 55, 55);
+    text-align: center;
+}
+
+#company{
+    float: left;
+    color: white;
+    width: 1920px;
+    background-color: rgb(57, 55, 55);
+}
+
+#bottom_icon{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#contact{
+    float: left;
+    color: white;
+    width: 100%;
+    background-color: rgb(57, 55, 55);
+}
+
+#email{
+    float: left;
+    color: white;
+    width: 100%;
+    background-color: rgb(57, 55, 55);
+}
+
+
+.bottom_ul > li{
+    list-style-type: none;
+}
+
+
+#scrolltop{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+}

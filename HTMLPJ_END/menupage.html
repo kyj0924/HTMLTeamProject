@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-Plates</title>
+    <link rel="stylesheet" href="css/menupage.css">
+    <script>
+        function close_menu(){
+            history.go(-1);
+        }
+        
+        var small_submenu1_count = 0;
+        var small_menu_li1_count = 0;
+        function menu1_click(){
+            let n = document.getElementsByClassName("small_submenu1");
+            let m = document.getElementsByClassName("small_menu_li1");
+            
+            for(let i=0; i<n.length; i++){
+                if(small_submenu1_count==0){
+                    n[i].style.height="80px";
+                    small_submenu1_count+=1;
+                }
+                else{
+                    n[i].style.height="0px"
+                    small_submenu1_count=0;
+                }
+            }
+            for(let i=0; i<m.length; i++){
+                if(small_menu_li1_count==0){
+                    m[i].style.height="150px";
+                    small_menu_li1_count+=1;
+                }
+                else{
+                    m[i].style.height="80px";
+                    small_menu_li1_count=0;
+                }
+            }
+        }
+
+        var small_submenu3_count = 0;
+        var small_menu_li3_count = 0;
+        function menu3_click(){
+            let n = document.getElementsByClassName("small_submenu3");
+            let m = document.getElementsByClassName("small_menu_li3");
+            
+            for(let i=0; i<n.length; i++){
+                if(small_submenu3_count==0){
+                    n[i].style.height="120px";
+                    small_submenu3_count+=1;
+                }
+                else{
+                    n[i].style.height="0px"
+                    small_submenu3_count=0;
+                }
+            }
+            for(let i=0; i<m.length; i++){
+                if(small_menu_li3_count==0){
+                    m[i].style.height="190px";
+                    small_menu_li3_count+=1;
+                }
+                else{
+                    m[i].style.height="80px";
+                    small_menu_li3_count=0;
+                }
+            }
+        }
+
+        var small_submenu4_count = 0;
+        var small_menu_li4_count = 0;
+        function menu4_click(){
+            let n = document.getElementsByClassName("small_submenu4");
+            let m = document.getElementsByClassName("small_menu_li4");
+            
+            for(let i=0; i<n.length; i++){
+                if(small_submenu4_count==0){
+                    n[i].style.height="120px";
+                    small_submenu4_count+=1;
+                }
+                else{
+                    n[i].style.height="0px"
+                    small_submenu4_count=0;
+                }
+            }
+            for(let i=0; i<m.length; i++){
+                if(small_menu_li4_count==0){
+                    m[i].style.height="190px";
+                    small_menu_li4_count+=1;
+                }
+                else{
+                    m[i].style.height="80px";
+                    small_menu_li4_count=0;
+                }
+            }
+        }
+
+        function menu5_click(){
+            window.location.href="map.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="header">            
+        <a href="mainpage.html" class="logo"><img class="company_logo" src="img/clogo.png" alt="Re-Plates"></a>
+        
+        
+        <!--메뉴바 모양 바뀌는거-->
+        <!--
+        <div class="small_menubar">
+        -->
+        <button class="close_small_menu" onclick="close_menu()">CLOSE</button>
+
+        <!--</div>-->
+    </div>
+    <div class="small_menu_div">
+        <ul class="small_menu">
+            <li class="small_menu_li1">
+                <!--<a href="#" class="small_mainmenu1" onclick="menu1_click()">Re-Plates</a>-->
+                <span class="small_mainmenu1" onclick="menu1_click()">Re-Plates</span>
+                <ul class="small_submenu1">
+                    
+                    <li class="small_submenu_li">
+                        <a href="select1.html">회사소개</a>
+                    </li>
+                    <li class="small_submenu_li">
+                        <a href="인사말.html">인사말</a>
+                    </li>
+                    <!--
+                    <li class="small_menu_li">
+                        <a href="#">연혁</a>
+                    </li>
+                    <li class="small_menu_li">
+                        <a href="#">인증</a>
+                    </li>
+                    <li class="small_menu_li">
+                        <a href="#">수상</a>
+                    </li>
+                    <li class="small_menu_li">
+                        <a href="#">주요사업실적</a>
+                    </li>
+                    <li class="small_menu_li">
+                        <a href="#">CI소개</a>
+                    </li>
+                    -->
+                </ul>
+            </li>
+            <!--
+            <li onmouseover="om()" onmouseout="out()">
+                <a href="#" class="mainmenu2">사업분야</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="#">IT 서비스</a>
+                    </li>
+                    <li>
+                        <a href="#">주요사례</a>
+                    </li>
+                </ul>
+            </li>
+            -->
+            <li class="small_menu_li3">
+                <span class="small_mainmenu3" onclick="menu3_click()">인재채용</span>
+                <ul class="small_submenu3">
+                    <li class="small_submenu_li">
+                        <a href="employee_image.html">인재상</a>
+                    </li>
+                    <li class="small_submenu_li">
+                        <a href="recruitment_procedures.html">채용절차</a>
+                    </li>
+                    <li class="small_submenu_li">
+                        <a href="recruitment information1.html">채용정보</a>
+                    </li>
+                    <!--
+                    <li class="small_menu_li">
+                        <a href="#">복지제도</a>
+                    </li>
+                    <li class="small_menu_li">
+                        <a href="#">채용정보</a>
+                    </li>
+                    -->
+                </ul>
+            </li>
+            <li class="small_menu_li4">
+                <span class="small_mainmenu4" onclick="menu4_click()">홍보센터</span>
+                <ul class="small_submenu4">
+                    <li class="small_submenu_li">
+                        <a href="social.html">사회공헌</a>
+                    </li>
+                    <li class="small_submenu_li">
+                        <a href="issue.html">사내소식</a>
+                    </li>
+                    <li class="small_submenu_li">
+                        <a href="news.html">보도자료</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="small_menu_li5">
+                <span class="small_mainmenu5" onclick="menu5_click()">오시는길</span>
+                <ul class="small_submenu5">
+    
+                </ul>
+            </li>
+            
+        </ul>
+    </div>
+</body>
+</html>

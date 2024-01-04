@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Re-Plates</title>
+    <link rel="stylesheet" href="css/mainpage.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function om() {
+        //let n=document.getElementById("submenu");
+        //n.style.height="500";
+        let n = document.getElementsByClassName("submenu");
+
+        // 메뉴에 마우스를 올렸을 때 메뉴 크기를 늘린다.
+        let m = document.getElementsByClassName("menu");
+        for (let i = 0; i < n.length; i++) {
+          n[i].style.width = "100%";
+          n[i].style.height = "250px";
+          //n[i].style.transition-duration: duration;
+        }
+        for (let i = 0; i < m.length; i++) {
+          m[i].style.height = "250px";
+        }
+      }
+      function out() {
+        let n = document.getElementsByClassName("submenu");
+        let m = document.getElementsByClassName("menu");
+        for (let i = 0; i < n.length; i++) {
+          n[i].style.height = 0;
+        }
+        for (let i = 0; i < m.length; i++) {
+          // header의 height 크기와 동일하게 만들어줘야 함
+          m[i].style.height = "78.5px";
+        }
+        //let m = document.getElementsByClassName("header");
+        /*
+            for(let m=0; i<n.length; i++){
+                m[i].style.z-index=0;
+            }
+            */
+      }
+      function onc_con() {
+        window.location.href = "select1.html";
+      }
+      function onc_constr() {
+        window.location.href = "recruitment_procedures.html";
+      }
+      function onc_develop() {
+        window.location.href = "news.html";
+      }
+
+      // small menu 클릭 시 menupage로 이동
+      function smclick() {
+        window.location.href = "menupage.html";
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div class="header">
+        <a href="mainpage.html" class="logo"
+          ><img class="company_logo" src="img/clogo.png"
+        /></a>
+
+        <ul class="menu">
+          <li class="menu_li" onmouseover="om()" onmouseout="out()">
+            <a href="select1.html" class="mainmenu1">Re-Plates</a>
+            <ul class="submenu">
+              <li class="menu_li">
+                <a href="select1.html">회사소개</a>
+              </li>
+              <li class="menu_li">
+                <a href="인사말.html">인사말</a>
+              </li>
+              <!--
+                        <li class="menu_li">
+                            <a href="#">연혁</a>
+                        </li>
+                        <li class="menu_li">
+                            <a href="#">인증</a>
+                        </li>
+                        <li class="menu_li">
+                            <a href="#">수상</a>
+                        </li>
+                        <li class="menu_li">
+                            <a href="#">주요사업실적</a>
+                        </li>
+                        <li class="menu_li">
+                            <a href="#">CI소개</a>
+                        </li>
+                        -->
+            </ul>
+          </li>
+
+          <li class="menu_li" onmouseover="om()" onmouseout="out()">
+            <a href="employee_image.html" class="mainmenu3">인재채용</a>
+            <ul class="submenu">
+              <li class="menu_li">
+                <a href="employee_image.html">인재상</a>
+              </li>
+              <li class="menu_li">
+                <a href="recruitment_procedures.html">채용절차</a>
+              </li>
+              <li class="menu_li">
+                <a href="recruitment information1.html">채용정보</a>
+              </li>
+              <!--
+                        <li class="menu_li">
+                            <a href="#">복지제도</a>
+                        </li>
+                        <li class="menu_li">
+                            <a href="#">채용정보</a>
+                        </li>
+                        -->
+            </ul>
+          </li>
+          <li class="menu_li" onmouseover="om()" onmouseout="out()">
+            <a href="social.html" class="mainmenu4">홍보센터</a>
+            <ul class="submenu">
+              <li class="menu_li">
+                <a href="social.html">사회공헌</a>
+              </li>
+              <li class="menu_li">
+                <a href="issue.html">사내소식</a>
+              </li>
+              <li class="menu_li">
+                <a href="news.html">보도자료</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu_li" onmouseover="om()" onmouseout="out()">
+            <a href="map.html" class="mainmenu5">오시는길</a>
+            <ul class="submenu"></ul>
+          </li>
+        </ul>
+        <!--메뉴바 모양 바뀌는거-->
+        <svg
+          class="small_menu_icon"
+          onclick="smclick()"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+          />
+        </svg>
+      </div>
+
+      <div class="info1">
+        <div class="info_p_all">
+          <p class="info_p1">국민의 안전과 공익을 위해!</p>
+          <p class="info_p2">Public Project Company</p>
+          <p class="info_p3">
+            <span class="sp1">Re-Plates</span>는 풍부한 경험을 지닌 공공시설
+            관리 전문인력과 관계사의 시스템에 대한<br />
+            전문 노하우를 보유하여 국민에게 안전한 시설과 만족감을 선사합니다.
+          </p>
+        </div>
+        <!-- 메인페이지 첫번째 사진 -->
+        <img class="main_img1" src="img/mc1.png" alt="main_img1" />
+      </div>
+
+      <div class="consulting">
+        <div class="consulting_text_all">
+          <p class="con_p1">Company Introducing</p>
+          <p class="con_p2">
+            프로젝트 목표달성, 업무 성과 달성에<br />
+            <span class="sp2">최적화된 관리 서비스</span>를 제공합니다.
+          </p>
+          <p class="con_p3">
+            이를 통해 국민이 만족할 수 있는 운영이 되도록 고객의 공공시설의 불편
+            및 건의사항을 확인하여
+          </p>
+          <p class="con_p4">
+            공공시설의 기획에서부터 운영 및 유지보수까지 관리합니다.
+          </p>
+          <br />
+          <!--&rarr;은 오른쪽 화살표-->
+          <button class="Project_Consulting" onclick="onc_con()">
+            More View &rarr;
+          </button>
+        </div>
+
+        <!-- 메인페이지 consulting 사진 -->
+        <img
+          class="main_consulting_img"
+          src="img/mc2.png"
+          alt="main_consulting_img"
+        />
+      </div>
+      <!-- 사진을 옆에 넣고 싶은데 방법을 모르겠음
+        <div class="ex_picture1">
+            <img src="img/examplePicture_RemoveBackground.png" alt="ex_pic1">
+        </div>
+        <div class="ex_picture2">
+            <img src="img/examplePicture_RemoveBackground.png" alt="ex_pic2">
+        </div>
+        -->
+      <div class="construction">
+        <!-- 메인페이지 construction 사진 -->
+        <img src="img/mc3.png" alt="main_construction_img" />
+        <div class="construction_text_all">
+          <p class="constr_p1">Recruitment Guidance</p>
+          <p class="constr_p2">
+            각 파트별 풍부한 경험을 지닌
+            <span class="sp3">경력자 인재</span>와<br />
+            새롭게 배우고 도전할 준비가 된
+            <span class="sp3">신입 인재</span>를<br />
+            채용하고 있습니다.
+          </p>
+          <p class="constr_p3">
+            저희 Re-Plates는 국민의 웹서비스 이용에 대해 시스템 설계, 운영,
+            하드웨어 및<br />
+            소프트웨어의 구축과 유지보수를 책임지고 관리하여 제보된 각종 문제의
+            민원 처리,<br />
+            공공 시설 유지보수 등을 정부 및 지자체가 수행할 수 있도록
+            지원합니다.<br />
+            저희와 함께 하실 인재를 찾습니다.
+          </p>
+          <button class="Web_Construction" onclick="onc_constr()">
+            More View &rarr;
+          </button>
+        </div>
+      </div>
+      <div class="development">
+        <div class="development_text_all">
+          <p class="dev_p1">Re-Plates News</p>
+          <p class="dev_p2">
+            공공시설 유지보수 시스템 웹 개발에 있어<br />
+            회사의 활동을 투명성 있게 소개하고<br />
+            앞으로도 최고의 품질과 기술력을 사용하여<br />
+            <span class="sp4">최상의 만족</span>을 드릴 것을 약속합니다.
+          </p>
+          <p class="dev_p3">
+            웹 개발 및 유지보수 관리 전문 기업으로써의 핵심역량을 보유하고
+            있는<br />
+            Re-Plates 팀들은 공공 사업 부문 업무 웹 개발과 공공 시설 유지보수에
+            주력하고 있으며,<br />
+            다수의 전문가들을 보유하고 있습니다.
+          </p>
+          <button class="Web_Development" onclick="onc_develop()">
+            More View &rarr;
+          </button>
+        </div>
+
+        <!-- 메인페이지 development 사진 -->
+        <img
+          class="main_development_img"
+          src="img/mc4.png"
+          alt="main_development_img"
+        />
+      </div>
+      <!-- css 적용하고 위치 배치 해야되는 overview 부분 -->
+      <div class="overview">
+        <p class="overview_p1">RE-PLATES Overview</p>
+        <p class="overview_p2">
+          <span class="sp5">숫자</span>로 알아보는 Re-Plates
+        </p>
+        <p class="overview_p3">
+          국민의 만족을 위해 최고의 만족을 목표로 하는 Re-Plates는<br />
+          신뢰를 바탕으로 국민과 함께 성장하겠습니다.
+        </p>
+      </div>
+
+      <!--숫자 올라가게 하는 코드-->
+      <div class="counting">
+        <div class="col1">
+          <svg
+            class="building_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-buildings-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M15 .5a.5.5 0 0 0-.724-.447l-8 4A.5.5 0 0 0 6 4.5v3.14L.342 9.526A.5.5 0 0 0 0 10v5.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V14h1v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V.5ZM2 11h1v1H2v-1Zm2 0h1v1H4v-1Zm-1 2v1H2v-1h1Zm1 0h1v1H4v-1Zm9-10v1h-1V3h1ZM8 5h1v1H8V5Zm1 2v1H8V7h1ZM8 9h1v1H8V9Zm2 0h1v1h-1V9Zm-1 2v1H8v-1h1Zm1 0h1v1h-1v-1Zm3-2v1h-1V9h1Zm-1 2h1v1h-1v-1Zm-2-4h1v1h-1V7Zm3 0v1h-1V7h1Zm-2-2v1h-1V5h1Zm1 0h1v1h-1V5Z"
+            />
+          </svg>
+          <p class="company_open">설립</p>
+          <p class="num_text">
+            <span class="count-num" data-count="2023">0</span
+            ><span class="count-num-unit">년</span>
+          </p>
+        </div>
+        <div class="col2">
+          <svg
+            class="complete_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-calendar-check"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"
+            />
+            <path
+              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
+            />
+          </svg>
+          <p class="complete_num">민원 완료 건수<br />(2023년 8월 기준)</p>
+          <p class="num_text">
+            <span class="count-num" data-count="1374">0</span
+            ><span class="count-num-unit">건</span>
+          </p>
+        </div>
+        <div class="col3">
+          <svg
+            class="employee_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-person-badge"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"
+            />
+            <path
+              d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0h-7zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492V2.5z"
+            />
+          </svg>
+          <p class="employee_num">임직원</p>
+          <p class="num_text">
+            <span class="count-num" data-count="333">0</span
+            ><span class="count-num-unit">명</span>
+          </p>
+        </div>
+      </div>
+      <!-- 비디오 실행 -->
+      <!-- autoplay는 자동 재생, controls는 재생 및 정지 등 조작 메뉴를 보여준다 -->
+      <!-- loop는 동영상 반복 재생, poster는 동영상 재생 전에 보여줄 이미지-->
+      <div class="replates_video_div">
+        <video class="replates_video" autoplay controls loop muted>
+          <source src="video/replate_video_merged.mp4" type="video/mp4" />
+          replates_video
+        </video>
+      </div>
+
+      <!-- 모든 페이지 공통 바텀부분 -->
+      <div id="bottom">
+        <div id="company">
+          <h2>
+            <svg
+              width="25"
+              height="25"
+              fill="currentColor"
+              id="bottom_icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H3Zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Z"
+              />
+            </svg>
+            COMPANY
+          </h2>
+          <ul id="bottom_ul">
+            <li>(주)RE-PLATES</li>
+            <li>대표이사 : 김영재</li>
+            <li>사업자번호 : 123-11-123456</li>
+          </ul>
+        </div>
+
+        <div id="contact">
+          <h2>
+            <svg
+              width="25"
+              height="25"
+              fill="currentColor"
+              id="bottom_icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+              />
+            </svg>
+            CONTACT
+          </h2>
+          <ul id="bottom_ul">
+            <li>전화 : 02-1234-1234</li>
+            <li>팩스 : 02-1234-5678</li>
+            <li>주소 : 서울 서초구 서초대로 77길 54</li>
+          </ul>
+        </div>
+
+        <div id="email">
+          <h2>
+            <svg
+              width="25"
+              height="25"
+              fill="currentColor"
+              id="bottom_icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
+              />
+            </svg>
+            E-MAIL
+          </h2>
+          <ul id="bottom_ul">
+            <li>본사 : admin@replates.co.kr</li>
+            <li>영업팀 : sales@replates.co.kr</li>
+            <li>기술팀 : tec@replates.co.kr</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="scrolltop">
+        <svg
+          onclick="window.scrollTo(0,0);"
+          id="top"
+          width="40"
+          height="40"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"
+          />
+        </svg>
+      </div>
+      <!--
+        <div>
+            <p class="copyright">copyright &copy;</p>
+        </div>
+        -->
+    </div>
+    <script>
+      // 숫자 올라가게 하는 javascript 코드
+      $(".count-num").each(function () {
+        // .count-num에 각각 적용
+        const $this = $(this),
+          countTo = $this.attr("data-count");
+        // $this = 첫번째~세번째 .count-num
+        // countTo = 첫번째~세번째 .count-num의 data-count 속성의 값(777,555,333)
+
+        $({ countNum: $this.text() }).animate(
+          {
+            countNum: countTo,
+            // countNum: $this.text() = 0, countNum: countTo = 777, 555, 333
+            // 0에서 countNum이 된다
+          },
+          {
+            duration: 3000, // 애니메이션이 완료될때까지 걸리는 시간
+            easing: "linear", // 애니메이션 효과 방식
+            step: function () {
+              // 움직임 각 스텝별로 실행될 함수
+              $this.text(Math.floor(this.countNum));
+              // Math.floor -> this.countNum의 값을 정수로 만들어준다
+            },
+            complete: function () {
+              // 움직임이 멈춘 후 실행될 함수
+              $this.text(this.countNum);
+              // this.countNum이 $this의 text값이 된다
+              //alert('finished');
+            },
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

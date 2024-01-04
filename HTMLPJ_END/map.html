@@ -1,0 +1,305 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Re-Plates</title>
+    <link rel="stylesheet" href="css/map.css">
+    <script>
+      function om(){
+          //let n=document.getElementById("submenu");
+          //n.style.height="500";
+          let n = document.getElementsByClassName("submenu");
+          
+          // 메뉴에 마우스를 올렸을 때 메뉴 크기를 늘린다.
+          let m = document.getElementsByClassName("menu");
+          for(let i=0; i<n.length; i++){
+              n[i].style.width="100%";
+              n[i].style.height="250px";
+              //n[i].style.transition-duration: duration;
+          }
+          for(let i=0; i<m.length; i++){
+              m[i].style.height="250px";
+          }
+          
+          
+      }
+      function out(){
+          let n = document.getElementsByClassName("submenu");
+          let m = document.getElementsByClassName("menu");
+          for(let i=0; i<n.length; i++){
+              n[i].style.height=0;
+          }
+          for(let i=0; i<m.length; i++){
+              // header의 height 크기와 동일하게 만들어줘야 함
+              m[i].style.height="78.5px";
+          }
+          //let m = document.getElementsByClassName("header");
+          /*
+          for(let m=0; i<n.length; i++){
+              m[i].style.z-index=0;
+          }
+          */
+      }
+
+      // small menu 클릭 시 menupage로 이동
+      function smclick(){
+          window.location.href="menupage.html";
+      }
+
+
+      
+  </script>
+  </head>
+  <body>
+
+    <div class="header">            
+      <a href="mainpage.html" class="logo"><img class="company_logo" src="img/clogo.png" alt="Re-Plates"></a>
+      
+      <ul class="menu">
+          
+          <li class="menu_li" onmouseover="om()" onmouseout="out()">
+              <a href="select1.html" class="mainmenu1">Re-Plates</a>
+              <ul class="submenu">
+                  <li class="menu_li">
+                      <a href="select1.html">회사소개</a>
+                  </li>
+                  <li class="menu_li">
+                      <a href="인사말.html">인사말</a>
+                  </li>
+                  <!--
+                  <li class="menu_li">
+                      <a href="#">연혁</a>
+                  </li>
+                  <li class="menu_li">
+                      <a href="#">인증</a>
+                  </li>
+                  <li class="menu_li">
+                      <a href="#">수상</a>
+                  </li>
+                  <li class="menu_li">
+                      <a href="#">주요사업실적</a>
+                  </li>
+                  <li class="menu_li">
+                      <a href="#">CI소개</a>
+                  </li>
+                  -->
+              </ul>
+          </li>
+
+          <li class="menu_li" onmouseover="om()" onmouseout="out()">
+              <a href="employee_image.html" class="mainmenu3">인재채용</a>
+              <ul class="submenu">
+                  <li class="menu_li">
+                      <a href="employee_image.html">인재상</a>
+                  </li>
+                  <li class="menu_li">
+                      <a href="recruitment_procedures.html">채용절차</a>
+                  </li>
+                  <li class="menu_li">
+                      <a href="recruitment information1.html">채용정보</a>
+                  </li>
+                  <!--
+                  <li class="menu_li">
+                      <a href="#">복지제도</a>
+                  </li>
+                  <li class="menu_li">
+                      <a href="#">채용정보</a>
+                  </li>
+                  -->
+              </ul>
+          </li>
+          <li class="menu_li" onmouseover="om()" onmouseout="out()">
+              <a href="social.html" class="mainmenu4">홍보센터</a>
+              <ul class="submenu">
+                  <li class="menu_li">
+                      <a href="social.html">사회공헌</a>
+                  </li>
+                  <li class="menu_li">
+                      <a href="issue.html">사내소식</a>
+                  </li>
+                  <li class="menu_li">
+                      <a href="news.html">보도자료</a>
+                  </li>
+              </ul>
+          </li>
+          <li class="menu_li" onmouseover="om()" onmouseout="out()">
+              <a href="map.html" class="mainmenu5">오시는길</a>
+              <ul class="submenu">
+
+              </ul>
+          </li>
+          
+      </ul>
+      <!--메뉴바 모양 바뀌는거-->
+      <svg class="small_menu_icon" onclick="smclick()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+  </div>
+
+
+  <img class="kakaomap" src="img/kakaomap.jpg" alt="kakaomap">
+  <div class="map_body">
+    <h1 class="map_title">오시는 길</h1>
+    
+  </div>
+  <div class="kakao_table">
+  <table width="500" border="1">
+    <tr>
+      <td>
+        <div
+          style="
+            font: normal normal 400 12px / normal dotum, sans-serif;
+            width: 860px;
+            height: 512px;
+            color: #333;
+            position: relative;
+          "
+        >
+          <div style="height: 480px">
+            <a
+              href="https://map.kakao.com/?urlX=505486.0&amp;urlY=1111977.0&amp;name=%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EC%84%9C%EC%B4%88%EB%8C%80%EB%A1%9C77%EA%B8%B8%2054&amp;map_type=TYPE_MAP&amp;from=roughmap"
+              target="_blank"
+              ><img
+                class="map"
+                src="http://t1.daumcdn.net/roughmap/imgmap/fcc22af0b2cdbb57ca194a565ad13a1365852b2c83697cec4e5ee097e422949a"
+                width="858px"
+                height="478px"
+                style="border: 1px solid #ccc"
+            /></a>
+          </div>
+          <div
+            style="
+              overflow: hidden;
+              padding: 7px 11px;
+              border: 1px solid rgba(0, 0, 0, 0.1);
+              border-radius: 0px 0px 2px 2px;
+              background-color: rgb(249, 249, 249);
+            "
+          >
+            <a
+              href="https://map.kakao.com"
+              target="_blank"
+              style="float: left"
+              ><img
+                src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png"
+                width="72"
+                height="16"
+                alt="카카오맵"
+                style="display: block; width: 72px; height: 16px"
+            /></a>
+            <div
+              style="
+                float: right;
+                position: relative;
+                top: 1px;
+                font-size: 11px;
+              "
+            >
+              <a
+                target="_blank"
+                href="https://map.kakao.com/?from=roughmap&amp;eName=%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EC%84%9C%EC%B4%88%EB%8C%80%EB%A1%9C77%EA%B8%B8%2054&amp;eX=505486.0&amp;eY=1111977.0"
+                style="
+                  float: left;
+                  height: 15px;
+                  padding-top: 1px;
+                  line-height: 15px;
+                  color: #000;
+                  text-decoration: none;
+                "
+                >길찾기</a
+              >
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+  <!-- 모든 페이지 공통 바텀부분 -->
+  <div id="bottom">
+    <div id="company">
+      <h2>
+        <svg
+          width="25"
+          height="25"
+          fill="currentColor"
+          id="bottom_icon"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H3Zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Z"
+          />
+        </svg>
+        COMPANY
+      </h2>
+      <ul id="bottom_ul">
+        <li>(주)RE-PLATES</li>
+        <li>대표이사 : 김영재</li>
+        <li>사업자번호 : 123-11-123456</li>
+      </ul>
+    </div>
+
+    <div id="contact">
+      <h2>
+        <svg
+          width="25"
+          height="25"
+          fill="currentColor"
+          id="bottom_icon"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+          />
+        </svg>
+        CONTACT
+      </h2>
+      <ul id="bottom_ul">
+        <li>전화 : 02-1234-1234</li>
+        <li>팩스 : 02-1234-5678</li>
+        <li>주소 : 서울 서초구 서초대로 77길 54</li>
+      </ul>
+    </div>
+
+    <div id="email">
+      <h2>
+        <svg
+          width="25"
+          height="25"
+          fill="currentColor"
+          id="bottom_icon"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
+          />
+        </svg>
+        E-MAIL
+      </h2>
+      <ul id="bottom_ul">
+        <li>본사 : admin@replates.co.kr</li>
+        <li>영업팀 : sales@replates.co.kr</li>
+        <li>기술팀 : tec@replates.co.kr</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="scrolltop">
+    <svg
+      onclick="window.scrollTo(0,0);"
+      id="top"
+      width="40"
+      height="40"
+      fill="currentColor"
+      viewBox="0 0 16 16"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"
+      />
+    </svg>
+  </div>
+  </body>
+</html>

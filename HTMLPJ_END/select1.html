@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Re-Plates</title>
+    <style>
+      @media screen and (max-width: 1549px) {
+        @font-face {
+          font-family: "GangwonState";
+          src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/GangwonState.woff2")
+            format("woff2");
+          font-weight: normal;
+          font-style: normal;
+        }
+        * {
+          padding: 0;
+          margin: 0;
+        }
+        body {
+          background-color: white;
+        }
+        .header {
+          position: fixed;
+          top: 0px;
+
+          width: 100%;
+          height: 78.5px;
+          background-color: white;
+          border-bottom: 1px solid rgb(231, 225, 225);
+          z-index: 9999;
+        }
+        a > .company_logo {
+          width: 300px;
+          height: 80px;
+          padding-top: 0;
+          margin-left: 30px;
+        }
+        .menu_li {
+          list-style: none;
+        }
+        a {
+          text-decoration: none;
+        }
+        .menu {
+          clear: left;
+          float: right;
+          /*
+        clear: left;
+        float: right;
+        */
+          /*width: 1200px;*/
+          /*height: 500px;*/
+          /*header의 height와 동일한 값으로 잡아야 함*/
+          /*height:78.5px;*/
+          overflow: hidden;
+          margin-top: 0;
+          display: none;
+        }
+        .menu > li {
+          width: 25%;
+          float: left;
+          text-align: center;
+          line-height: 80px;
+          /*background-color: #5778ff;*/
+          background-color: #7ab49d;
+        }
+        .menu a {
+          color: white;
+        }
+        .submenu > li {
+          line-height: 50px;
+        }
+
+        .submenu {
+          height: 0;
+          overflow: hidden;
+          /*background-color: #94a9ff;*/
+          background-color: #9dc7b6;
+        }
+
+        .menu > li > a:hover {
+          transition-duration: 0.5s;
+        }
+        .menu > li > a:hover,
+        submenu {
+          height: 500px;
+          transition-duration: 1s;
+        }
+        /* 창 크기 작아졌을 때 생기는 메뉴바 css*/
+        .small_menu_icon {
+          width: 40px;
+          height: 40px;
+          float: right;
+          margin-top: 20px;
+          margin-right: 10px;
+          cursor: pointer;
+        }
+
+        /*여기까지가 메뉴바*/
+
+        .gnb1 {
+          list-style: none;
+          /* 리스트 마커 숨기기 */
+          font-size: 30px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+
+        .title_a {
+          text-decoration: none;
+          color: black;
+          font-size: 20px;
+        }
+
+        .gnb1 {
+          border: 1px solid white;
+        }
+        .page_move {
+          display: inline-flex;
+          margin: 0px 20px 0px 20px;
+        }
+        .Mtitle {
+          margin-top: 200px;
+          margin-left: 50px;
+        }
+        .Mtitle_div {
+          white-space: nowrap;
+        }
+        .title_hr {
+          border: 1px solid #7ab49d;
+          width: 1920px;
+        }
+        .title {
+          display: inline-flex;
+          width: 200px;
+          border-right: 2px solid #7ab49d;
+          font-weight: bold;
+          padding: 20px;
+        }
+        span {
+          margin: auto;
+        }
+
+        .title2 {
+          text-align: center;
+          margin-top: 150px;
+          font-size: 40px;
+          color: #7ab49d;
+        }
+        .view {
+          border: 1px solid black;
+          display: table;
+          border-collapse: collapse;
+          margin: 0 auto;
+          font-size: 20px;
+        }
+        tr,
+        td {
+          border: 2px solid #7ab49d;
+          padding: 10px 100px 10px 100px;
+        }
+        .viewtxt {
+          color: #7ab49d;
+        }
+
+        .select {
+          background-color: #7ab49d;
+          color: white;
+        }
+        .body_div {
+          width: 1920px;
+          white-space: nowrap;
+        }
+        .info {
+          text-align: center;
+          width: 1920px;
+          white-space: nowrap;
+        }
+        .info_title {
+          margin-top: 80px;
+          margin-bottom: 40px;
+        }
+        .info_text {
+          font-size: 20px;
+        }
+        .subLogo {
+          width: 400px;
+          display: block;
+          margin: auto;
+        }
+        .subhr {
+          border: 1px solid #7ab49d;
+          width: 1525px;
+          margin: auto;
+        }
+        .CEO {
+          margin-left: 300px;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+        .CEO_title {
+          font-weight: bold;
+          font-size: 20px;
+          color: skyblue;
+          border-right: 2px solid black;
+          padding-right: 10px;
+        }
+        .companyinfo_hr {
+          margin-left: 250px;
+          color: gray;
+          width: 500px;
+        }
+        .companybild {
+          font-weight: bold;
+          font-size: 20px;
+          color: skyblue;
+          border-right: 2px solid black;
+          padding-right: 10px;
+        }
+        .ceoimg1 {
+          width: 50px;
+          height: 50px;
+          margin-right: 20px;
+        }
+        .ceoimg {
+          width: 50px;
+          height: 50px;
+        }
+        .companyinfo {
+          float: left;
+        }
+
+        .image-container {
+          margin: 10px;
+          position: relative;
+          width: 50px; /* 이미지 컨테이너의 너비 조절 */
+          height: 50px; /* 이미지 컨테이너의 높이 조절 */
+          overflow: hidden;
+        }
+
+        .image-container img {
+          position: absolute;
+          opacity: 0;
+          transition: opacity 1s ease-in-out;
+        }
+
+        #bottom {
+          bottom: 0;
+          left: 0;
+          display: inline-flex;
+          color: white;
+          width: 1920px;
+          background-color: rgb(57, 55, 55);
+        }
+
+        #company {
+          float: left;
+          color: white;
+          width: 1920px;
+          background-color: rgb(57, 55, 55);
+        }
+
+        #bottom_icon {
+          /* padding-left: 15px; */
+          padding-right: 15px;
+        }
+
+        #contact {
+          float: left;
+          color: white;
+          width: 100%;
+          background-color: rgb(57, 55, 55);
+        }
+        #email {
+          float: left;
+          color: white;
+          width: 100%;
+          background-color: rgb(57, 55, 55);
+        }
+
+        #company,
+        #contact,
+        #email {
+          margin: 10px 0px 10px 10px;
+        }
+
+        .bottom_txt {
+          list-style-type: none;
+        }
+
+        #scrolltop {
+          position: fixed;
+          bottom: 10px;
+          right: 10px;
+          background-color: orange;
+          color: white;
+          cursor: pointer;
+        }
+      }
+
+      @media screen and (min-width: 1550px) {
+        @font-face {
+          font-family: "GangwonState";
+          src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/GangwonState.woff2")
+            format("woff2");
+          font-weight: normal;
+          font-style: normal;
+        }
+        * {
+          padding: 0;
+          margin: 0;
+        }
+        body {
+          background-color: white;
+        }
+        .header {
+          position: fixed;
+          top: 0px;
+
+          width: 100%;
+          height: 78.5px;
+          background-color: white;
+          border-bottom: 1px solid rgb(231, 225, 225);
+          z-index: 9999;
+        }
+        a > .company_logo {
+          width: 300px;
+          height: 80px;
+          padding-top: 0;
+          margin-left: 30px;
+        }
+        .menu_li {
+          list-style: none;
+        }
+        a {
+          text-decoration: none;
+        }
+        .menu {
+          clear: left;
+          float: right;
+          /*
+        clear: left;
+        float: right;
+        */
+          width: 1200px;
+          /*height: 500px;*/
+          /*header의 height와 동일한 값으로 잡아야 함*/
+          height: 78.5px;
+          overflow: hidden;
+          margin-top: 0;
+          border-radius: 0 0 0 30px;
+        }
+        .menu > li {
+          width: 25%;
+          float: left;
+          text-align: center;
+          line-height: 80px;
+          /*background-color: #5778ff;*/
+          background-color: #7ab49d;
+        }
+        .menu a {
+          color: white;
+        }
+        .submenu > li {
+          line-height: 50px;
+        }
+
+        .submenu {
+          height: 0;
+          overflow: hidden;
+          /*background-color: #94a9ff;*/
+          background-color: #9dc7b6;
+        }
+
+        .menu > li > a:hover {
+          transition-duration: 0.5s;
+        }
+        .menu > li > a:hover,
+        submenu {
+          height: 500px;
+          transition-duration: 1s;
+        }
+
+        .small_menu_icon {
+          display: none;
+        }
+        .gnb1 {
+          list-style: none;
+          /* 리스트 마커 숨기기 */
+          font-size: 30px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+
+        .title_a {
+          text-decoration: none;
+          color: black;
+          font-size: 20px;
+        }
+
+        .gnb1 {
+          border: 1px solid white;
+        }
+        .page_move {
+          display: inline-flex;
+          margin: 0px 20px 0px 20px;
+        }
+        .Mtitle {
+          margin-top: 200px;
+          margin-left: 50px;
+        }
+
+        .title_hr {
+          border: 1px solid #7ab49d;
+        }
+        .title {
+          display: inline-flex;
+          width: 200px;
+          border-right: 2px solid #7ab49d;
+          font-weight: bold;
+          padding: 20px;
+        }
+        span {
+          margin: auto;
+        }
+
+        .title2 {
+          text-align: center;
+          margin-top: 150px;
+          font-size: 40px;
+          color: #7ab49d;
+        }
+        .view {
+          border: 1px solid black;
+          display: table;
+          border-collapse: collapse;
+          margin: 0 auto;
+          font-size: 20px;
+        }
+        tr,
+        td {
+          border: 2px solid #7ab49d;
+          padding: 10px 100px 10px 100px;
+        }
+        .viewtxt {
+          color: #7ab49d;
+        }
+
+        .select {
+          background-color: #7ab49d;
+          color: white;
+        }
+
+        .info {
+          text-align: center;
+        }
+        .info_title {
+          margin-top: 80px;
+          margin-bottom: 40px;
+        }
+        .info_text {
+          font-size: 20px;
+        }
+        .subLogo {
+          width: 400px;
+          display: block;
+          margin: auto;
+        }
+        .subhr {
+          border: 1px solid #7ab49d;
+          width: 1525px;
+          margin: auto;
+        }
+        .CEO {
+          margin-left: 300px;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+        .CEO_title {
+          font-weight: bold;
+          font-size: 20px;
+          color: skyblue;
+          border-right: 2px solid black;
+          padding-right: 10px;
+        }
+        .companyinfo_hr {
+          margin-left: 250px;
+          color: gray;
+          width: 500px;
+        }
+        .companybild {
+          font-weight: bold;
+          font-size: 20px;
+          color: skyblue;
+          border-right: 2px solid black;
+          padding-right: 10px;
+        }
+        .ceoimg1 {
+          width: 50px;
+          height: 50px;
+          margin-right: 20px;
+        }
+        .ceoimg {
+          width: 50px;
+          height: 50px;
+        }
+        .companyinfo {
+          float: left;
+        }
+
+        .image-container {
+          margin: 10px;
+          position: relative;
+          width: 50px; /* 이미지 컨테이너의 너비 조절 */
+          height: 50px; /* 이미지 컨테이너의 높이 조절 */
+          overflow: hidden;
+        }
+
+        .image-container img {
+          position: absolute;
+          opacity: 0;
+          transition: opacity 1s ease-in-out;
+        }
+
+        #bottom {
+          bottom: 0;
+          left: 0;
+          display: inline-flex;
+          color: white;
+          width: 1920px;
+          background-color: rgb(57, 55, 55);
+        }
+
+        #company {
+          float: left;
+          color: white;
+          width: 1920px;
+          background-color: rgb(57, 55, 55);
+        }
+
+        #bottom_icon {
+          /* padding-left: 15px; */
+          padding-right: 15px;
+        }
+
+        #contact {
+          float: left;
+          color: white;
+          width: 100%;
+          background-color: rgb(57, 55, 55);
+        }
+        #email {
+          float: left;
+          color: white;
+          width: 100%;
+          background-color: rgb(57, 55, 55);
+        }
+
+        #company,
+        #contact,
+        #email {
+          margin: 10px 0px 10px 10px;
+        }
+
+        .bottom_txt {
+          list-style-type: none;
+        }
+
+        #scrolltop {
+          position: fixed;
+          bottom: 10px;
+          right: 10px;
+          background-color: orange;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function om() {
+        //let n=document.getElementById("submenu");
+        //n.style.height="500";
+        let n = document.getElementsByClassName("submenu");
+
+        // 메뉴에 마우스를 올렸을 때 메뉴 크기를 늘린다.
+        let m = document.getElementsByClassName("menu");
+        for (let i = 0; i < n.length; i++) {
+          n[i].style.width = "100%";
+          n[i].style.height = "250px";
+          //n[i].style.transition-duration: duration;
+        }
+        for (let i = 0; i < m.length; i++) {
+          m[i].style.height = "250px";
+        }
+      }
+      function out() {
+        let n = document.getElementsByClassName("submenu");
+        let m = document.getElementsByClassName("menu");
+        for (let i = 0; i < n.length; i++) {
+          n[i].style.height = 0;
+        }
+        for (let i = 0; i < m.length; i++) {
+          // header의 height 크기와 동일하게 만들어줘야 함
+          m[i].style.height = "78.5px";
+        }
+        //let m = document.getElementsByClassName("header");
+        /*
+            for(let m=0; i<n.length; i++){
+                m[i].style.z-index=0;
+            }
+            */
+      }
+
+      // small menu 클릭 시 menupage로 이동
+      function smclick() {
+        window.location.href = "menupage.html";
+      }
+
+      function onc_con() {
+        window.location.href = "#";
+      }
+      function onc_constr() {
+        window.location.href = "#";
+      }
+      function onc_develop() {
+        window.location.href = "#";
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="header">
+      <a href="mainpage.html" class="logo"
+        ><img
+          class="company_logo"
+          src="img/clogo.png"
+          alt="Re-Plates"
+      /></a>
+
+      <ul class="menu">
+        <li class="menu_li" onmouseover="om()" onmouseout="out()">
+          <a href="select1.html" class="mainmenu1">Re-Plates</a>
+          <ul class="submenu">
+            <li class="menu_li">
+              <a href="select1.html">회사소개</a>
+            </li>
+            <li class="menu_li">
+              <a href="인사말.html">인사말</a>
+            </li>
+            <!--
+                    <li class="menu_li">
+                        <a href="#">연혁</a>
+                    </li>
+                    <li class="menu_li">
+                        <a href="#">인증</a>
+                    </li>
+                    <li class="menu_li">
+                        <a href="#">수상</a>
+                    </li>
+                    <li class="menu_li">
+                        <a href="#">주요사업실적</a>
+                    </li>
+                    <li class="menu_li">
+                        <a href="#">CI소개</a>
+                    </li>
+                    -->
+          </ul>
+        </li>
+
+        <li class="menu_li" onmouseover="om()" onmouseout="out()">
+          <a href="employee_image.html" class="mainmenu3">인재채용</a>
+          <ul class="submenu">
+            <li class="menu_li">
+              <a href="employee_image.html">인재상</a>
+            </li>
+            <li class="menu_li">
+              <a href="recruitment_procedures.html">채용절차</a>
+            </li>
+            <li class="menu_li">
+              <a href="recruitment information1.html">채용정보</a>
+            </li>
+            <!--
+                    <li class="menu_li">
+                        <a href="#">복지제도</a>
+                    </li>
+                    <li class="menu_li">
+                        <a href="#">채용정보</a>
+                    </li>
+                    -->
+          </ul>
+        </li>
+        <li class="menu_li" onmouseover="om()" onmouseout="out()">
+          <a href="social.html" class="mainmenu4">홍보센터</a>
+          <ul class="submenu">
+            <li class="menu_li">
+              <a href="social.html">사회공헌</a>
+            </li>
+            <li class="menu_li">
+              <a href="issue.html">사내소식</a>
+            </li>
+            <li class="menu_li">
+              <a href="news.html">보도자료</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu_li" onmouseover="om()" onmouseout="out()">
+          <a href="map.html" class="mainmenu5">오시는길</a>
+          <ul class="submenu"></ul>
+        </li>
+      </ul>
+      <!--메뉴바 모양 바뀌는거-->
+      <svg
+        class="small_menu_icon"
+        onclick="smclick()"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-list"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+        />
+      </svg>
+    </div>
+
+    <h1 class="Mtitle">회사 소개</h1>
+    <div class="Mtitle_div">
+      <hr class="title_hr" />
+      <ul class="gnb1">
+        <li class="title"><span>Re-Plates</span></li>
+        <li class="page_move">
+          <a href="select1.html" class="title_a">회사소개</a>
+        </li>
+        <li class="page_move">
+          <a href="인사말.html" class="title_a">인사말</a>
+        </li>
+        <!--
+        <li class="page_move"><a href="/sub/company/history.php" class="title_a">연혁</a></li>
+        <li class="page_move"><a href="/sub/company/certification.php" class="title_a">인증</a></li>
+        <li class="page_move"><a href="/sub/company/award.php" class="title_a">수상</a></li>
+        <li class="page_move"><a href="/sub/company/result.php" class="title_a">주요사업실적</a></li>
+        <li class="page_move"><a href="/sub/company/ci.php" class="title_a">CI소개</a></li>
+        -->
+      </ul>
+      <hr class="title_hr" />
+    </div>
+
+    <div class="body_div">
+      <h2 class="title2">소개</h2>
+      <table class="view">
+        <tr>
+          <td class="select"><a href="select1.html" class="select">소개</a></td>
+          <td><a href="select2.html" class="viewtxt">경영 철학</a></td>
+          <td><a href="select3.html" class="viewtxt">실적</a></td>
+        </tr>
+      </table>
+
+      <div class="info">
+        <h3 class="info_title">About Re-Plates</h3>
+        <p class="info_text">
+          고객의 공공시설의 불편및 건의사항을 확인하여<br />
+          공공시설의 기획에서부터 운영및 유지보수를 관리 담당하는 프로젝트
+          입니다.
+        </p>
+      </div>
+      <img src="img/logo.png" width="230" height="100" class="subLogo" />
+      <hr class="subhr" />
+      <div class="companyinfo">
+        <p class="CEO">
+          <img src="img/about_icon02.png" class="ceoimg1" />
+          <span class="CEO_title">대표</span> Re-Plates CEO 김영재 대표
+        </p>
+        <hr class="companyinfo_hr" />
+        <p class="CEO">
+          <img src="img/about_icon03.png" class="ceoimg" />
+          <span class="companybild">설립일</span> Founded 2023.09.26
+        </p>
+        <hr class="companyinfo_hr" />
+        <p class="CEO">
+          <img src="img/about_icon04.png" class="ceoimg" />
+          <span class="companybild">소재지</span> Location 서울 서초구 서초대로
+          77길 54
+        </p>
+        <hr class="companyinfo_hr" />
+        <p class="CEO">
+          <img src="img/about_icon05.png" class="ceoimg" />
+          <span class="companybild">사업장</span> Workplace 서울 서초구 서초대로
+          77길 54 본사
+        </p>
+      </div>
+      <img src="img/subimage.png" />
+    </div>
+
+    <div class="image-container">
+      <img
+        class="street-light"
+        src="img/street-light.png"
+        alt=""
+        width="50"
+        height="50"
+      />
+      <img class="garden" src="img/garden.png" alt="" width="50" height="50" />
+      <img class="road" src="img/road.png" alt="" width="50" height="50" />
+      <img
+        class="elevator"
+        src="img/elevator.png"
+        alt=""
+        width="50"
+        height="50"
+      />
+      <img
+        class="escalator"
+        src="img/escalator.png"
+        alt=""
+        width="50"
+        height="50"
+      />
+    </div>
+    <script>
+      const images = document.querySelectorAll(".image-container img");
+      let currentIndex = 0;
+
+      function showNextImage() {
+        images[currentIndex].style.opacity = 0;
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].style.opacity = 1;
+      }
+
+      images[currentIndex].style.opacity = 1;
+
+      setInterval(showNextImage, 2000);
+    </script>
+
+    <div id="bottom">
+      <div id="company">
+        <h2>
+          <svg
+            width="25"
+            height="25"
+            fill="currentColor"
+            id="bottom_icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h3v-3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V16h3a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H3Zm1 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5Z"
+            /></svg
+          >COMPANY
+        </h2>
+        <ul class="bottom_txt">
+          <li class="bottom_txt">(주)RE-PLATES</li>
+          <li class="bottom_txt">대표이사 : 김영재</li>
+          <li class="bottom_txt">사업자번호 : 123-11-123456</li>
+        </ul>
+      </div>
+
+      <div id="contact">
+        <h2>
+          <svg
+            width="25"
+            height="25"
+            fill="currentColor"
+            id="bottom_icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+            /></svg
+          >CONTACT
+        </h2>
+        <ul class="bottom_txt">
+          <li class="bottom_txt">전화 : 02-1234-1234</li>
+          <li class="bottom_txt">팩스 : 02-1234-5678</li>
+          <li class="bottom_txt">주소 : 서울 서초구 서초대로 77길 54</li>
+        </ul>
+      </div>
+
+      <div id="email">
+        <h2>
+          <svg
+            width="25"
+            height="25"
+            fill="currentColor"
+            id="bottom_icon"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
+            /></svg
+          >E-MAIL
+        </h2>
+        <ul class="bottom_txt">
+          <li class="bottom_txt">본사 : admin@replates.co.kr</li>
+          <li class="bottom_txt">영업팀 : sales@replates.co.kr</li>
+          <li class="bottom_txt">기술팀 : tec@replates.co.kr</li>
+        </ul>
+      </div>
+    </div>
+    <div id="scrolltop">
+      <svg
+        onclick="window.scrollTo(0,0);"
+        id="top"
+        width="40"
+        height="40"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"
+        />
+      </svg>
+    </div>
+  </body>
+</html>
